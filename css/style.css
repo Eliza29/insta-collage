@@ -1,0 +1,25 @@
+body {
+  background-color: #26272B;
+}
+
+.height {
+  height: 50vh;
+}
+
+.height-1 {
+  height: 25vh;
+}
+
+.icon-instagram, p {
+  color: #4584d6;
+  font-size: 1.5rem;
+}
+
+figure {
+  margin: 0;
+}
+
+.p-0 {
+  padding-right: 0;
+  padding-left: 0;
+}
