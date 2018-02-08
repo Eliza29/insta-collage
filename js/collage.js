@@ -2,31 +2,46 @@ window.onload = function () {
   let imgForCollage = document.getElementsByTagName('img');
   imgForCollage = [...imgForCollage];
 
-  document.addEventListener('dragstart', handleDragStart);
-  document.addEventListener('dragover', handleDragOver);
-  document.addEventListener('drop', handleDrop);
+  let deleteParentContainer = divParent => divParent.parentElement.removeChild(divParent);
 
-  function handleDragStart(event) { 
+  let createParentContainer = (child) => {
+    let containerImgs = document.getElementById('container-imgs');
+    let divContainerParent = document.createElement('div');
+    divContainerParent.setAttribute('class', 'col-4 p-0');
+    divContainerParent.appendChild(child);
+    containerImgs.appendChild(divContainerParent);
+  };
+
+  let handleDragStart = (event) => { 
     event.dataTransfer.setData('text', event.target.id);
   }
 
-  function handleDragOver(e) {
-    e.preventDefault(); 
-    e.dataTransfer.dropEffect = 'move'; 
+  let handleDragOver = (event) => {
+    event.preventDefault(); 
+    event.dataTransfer.dropEffect = 'move'; 
   }
 
-  function handleDrop(event) { debugger
-    event.preventDefault();
-
+  let handleDrop = (event) => { 
+    event.preventDefault(); debugger;
+    let parentFirtsContainer;
     if (event.target.classList.contains('border-img')) {
       let idImg = event.dataTransfer.getData('text');
+      parentFirtsContainer = document.getElementById(idImg).parentElement; 
       event.target.appendChild(document.getElementById(idImg));
+      deleteParentContainer(parentFirtsContainer);
     } else if (event.target.id) {
       let idImg = event.dataTransfer.getData('text');
-      let parentContainer = event.target.parentElement; 
-      parentContainer.removeChild(event.target);
-      parentContainer.appendChild(document.getElementById(idImg));
+      let newParentContainer = event.target.parentElement; 
+      parentFirtsContainer = document.getElementById(idImg).parentElement;                 
+      newParentContainer.removeChild(event.target);
+      newParentContainer.appendChild(document.getElementById(idImg));
+      deleteParentContainer(parentFirtsContainer);  
+      createParentContainer(event.target);
     }
   }
 
+  // asociando funciones a eventos
+  document.addEventListener('dragstart', handleDragStart);
+  document.addEventListener('dragover', handleDragOver);
+  document.addEventListener('drop', handleDrop);
 } ;
