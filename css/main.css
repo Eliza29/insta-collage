@@ -1,6 +1,8 @@
 /* Estilos del proyecto */
 body{
-    /* background-color: purple; */
+    background: linear-gradient(to bottom left, #64b288 0%, #cb7953 100%);
+    height: 100vh;
+    color: white;
 }
 img{
     width: 60px;
