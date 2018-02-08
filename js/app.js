@@ -1,16 +1,13 @@
 /* Funcionalidad del proyecto*/
 $(document).ready(function() {
-    var $email = $('#inputEmail');
-    var $password = $('#inputPassword');
-    var $buttonSubmit = $('#buttonSubmit')
+    let $email = $('#inputEmail');
+    let $password = $('#inputPassword');
+    let $buttonSubmit = $('#buttonSubmit')
   
   
-    var validateEmail = false;
-    var validatePassword = false; 
+    let validateEmail = false;
+    let validatePassword = false; 
   
-    // llamamos a los valores guardados en el localStorage
-    console.log(localStorage.email);
-    console.log(localStorage.password);
   
    // si el email es igual al valor almacenado en el del local storage
     $email.on('input', function() {

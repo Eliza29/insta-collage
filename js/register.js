@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    var $email = $('#inputEmail');
-    var $password = $('#inputPassword');
+    let $email = $('#inputEmail');
+    let $password = $('#inputPassword');
     
-    var validateEmail = false;
-    var validatePassword = false; 
+    let validateEmail = false;
+    let validatePassword = false; 
 
     function activeButton() {
       if (validateEmail && validatePassword) {
@@ -17,7 +17,7 @@ $(document).ready(function() {
   
     $email.on('input', function(event) {
     
-      var REGEXEMAIL = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
+      const REGEXEMAIL = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
       console.log(REGEXEMAIL.test($(this).val()));
       console.log($(this).val());
       if (REGEXEMAIL.test($(this).val())) {
