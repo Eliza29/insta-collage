@@ -26,7 +26,6 @@ $(document).ready(function() {
     $buttonSubmit.on('click', function(event) {
       event.preventDefault();
       if (validateEmail && validatePassword) {
-        alert('Bienvenido');
         window.location.href = 'views/collage.html';
       } else {
         alert('Clave y/o contraseña incorrecta');

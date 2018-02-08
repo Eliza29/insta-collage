@@ -2,12 +2,24 @@ body {
   background-color: #26272B;
 }
 
+#container-imgs{
+  background-color: #000000;
+}
+
+.bg-collage {
+  background-color: #26272B;
+}
+
+.icon-instagram.c-white {
+  color: white;
+}
+
 .height {
-  height: 50vh;
+  height: 60vh;
 }
 
 .height-1 {
-  height: 25vh;
+  height: 30vh;
 }
 
 .icon-instagram, p {
@@ -27,4 +39,10 @@ figure {
 .border-img>img {
   width: 100%;
   height: 100%;
+}
+
+.aling-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

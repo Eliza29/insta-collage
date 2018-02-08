@@ -7,7 +7,7 @@ window.onload = function () {
   let createParentContainer = (child) => {
     let containerImgs = document.getElementById('container-imgs');
     let divContainerParent = document.createElement('div');
-    divContainerParent.setAttribute('class', 'col-4 p-0');
+    divContainerParent.setAttribute('class', 'col-4 p-0 border');
     divContainerParent.appendChild(child);
     containerImgs.appendChild(divContainerParent);
   };
