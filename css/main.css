@@ -6,26 +6,30 @@ body{
     font-family: 'Montserra', sans-serif;
     font-size: 18px;
 }
+
 section a{
     text-decoration: none;
     color:white;
 }
+
 h1,h2{
     font-family: 'Lobster', cursive;
     margin-bottom: 20px;
 }
+
 hr{
     background-color: rgb(147, 170, 199);
 }
+
 img{
     
     width: 40px;
 }
+
 form{
     margin-top:30px;
-    /* font-family: 'Raleway', sans-serif;
-    font-size: 18px; */
 }
+
 .btn{
     margin-top:27px;
     margin-bottom:15px;

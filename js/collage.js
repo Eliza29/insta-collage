@@ -1,10 +1,11 @@
-window.onload = function () {
+window.onload = () => {
   let imgForCollage = document.getElementsByTagName('img');
   imgForCollage = [...imgForCollage];
+  console.log(imgForCollage);
 
   let deleteParentContainer = divParent => divParent.parentElement.removeChild(divParent);
 
-  let createParentContainer = (child) => {
+  let createParentContainer = child => {
     let containerImgs = document.getElementById('container-imgs');
     let divContainerParent = document.createElement('div');
     divContainerParent.setAttribute('class', 'col-4 p-0 border');
@@ -12,21 +13,22 @@ window.onload = function () {
     containerImgs.appendChild(divContainerParent);
   };
 
-  let handleDragStart = (event) => { 
+  let handleDragStart = event => { 
     event.dataTransfer.setData('text', event.target.id);
-  }
+  };
 
-  let handleDragOver = (event) => {
+  let handleDragOver = event => {
     event.preventDefault(); 
     event.dataTransfer.dropEffect = 'move'; 
-  }
+  };
 
-  let handleDrop = (event) => { 
-    event.preventDefault(); debugger;
+  let handleDrop = event => { 
+    event.preventDefault();
     let parentFirtsContainer;
     if (event.target.classList.contains('border-img')) {
       let idImg = event.dataTransfer.getData('text');
-      parentFirtsContainer = document.getElementById(idImg).parentElement; 
+      parentFirtsContainer = document.getElementById(idImg).parentElement;
+      event.target.removeChild(event.target.children[0]); 
       event.target.appendChild(document.getElementById(idImg));
       deleteParentContainer(parentFirtsContainer);
     } else if (event.target.id) {
@@ -38,7 +40,7 @@ window.onload = function () {
       deleteParentContainer(parentFirtsContainer);  
       createParentContainer(event.target);
     }
-  }
+  };
 
   // asociando funciones a eventos
   document.addEventListener('dragstart', handleDragStart);
