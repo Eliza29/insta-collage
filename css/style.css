@@ -1,13 +1,9 @@
-body {
+body, .bg-collage {
   background-color: #26272B;
 }
 
 #container-imgs{
   background-color: #000000;
-}
-
-.bg-collage {
-  background-color: #26272B;
 }
 
 .icon-instagram.c-white {
@@ -20,6 +16,10 @@ body {
 
 .height-1 {
   height: 30vh;
+}
+
+.height-2 {
+  min-height: 30vh;
 }
 
 .icon-instagram, p {
