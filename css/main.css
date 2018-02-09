@@ -6,9 +6,11 @@ body{
     font-family: 'Montserra', sans-serif;
     font-size: 18px;
 }
+
 section{
     padding-top:18px; 
 }
+
 section a{
     text-decoration: none;
     color:white;
@@ -22,9 +24,11 @@ h1,h2{
 hr{
     background-color: rgb(147, 170, 199);
 }
+
 p{
     font-size: 0.9rem;
 }
+
 img{
     
     width: 40px;

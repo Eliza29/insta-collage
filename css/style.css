@@ -10,6 +10,19 @@ body, .bg-collage {
   color: white;
 }
 
+a.navbar-brand {
+  font-family: 'Lobster', cursive; 
+}
+
+.navbar>a {
+  text-decoration: none; 
+  padding: 1rem 1.2rem;
+}
+
+.navbar>a>span.icon-checkmark {
+  font-size: 1.3rem;
+}
+
 .height {
   height: 60vh;
 }
