@@ -11,26 +11,34 @@
   <title>Insta Collage </title>
 </head>
 <body>
-  
-  <section class="container">
-      <p class="text-center">Idioma: español (España)</p>
-      <img src="assets/images/icon.svg" alt="logo">
-      <h1 class= "text-center">Insta Collage</h1>
-      <hr>
-    <form>
-      <div class="form-group">
-        <!-- <label for="inputEmail">Email address</label> -->
-        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Ingresa tu email">
-      </div>
-      <div class="form-group">
-        <!-- <label for="inputPassword">Password</label> -->
-        <input type="password" class="form-control" id="inputPassword" placeholder="Ingresa tu contraseña">
-      </div>
-      <button type="submit" id = 'buttonSubmit'class="btn btn-outline-light btn-block">Iniciar Sesión</button>
-      
-    </form>
-    <a href="views/register.html">¿No tienes una cuenta? <span class="font-weight-bold">Registrate</span></a>
-  </section>
+  <main class="container-fluid">
+    <div class="row">
+      <section class="col-form-section">
+          <img src="assets/images/santorini.jpg" id="main-image" alt="image">
+      </section>
+      <section class="col-form-section">
+        <div class="container-form">
+          <p class="text-center">Idioma: español (España)</p>
+          <img src="assets/images/icon.svg" alt="logo">
+          <h1 class= "text-center">Insta Collage</h1>
+          <hr>
+        <form>
+          <div class="form-group">
+            <!-- <label for="inputEmail">Email address</label> -->
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Ingresa tu email">
+          </div>
+          <div class="form-group">
+            <!-- <label for="inputPassword">Password</label> -->
+            <input type="password" class="form-control" id="inputPassword" placeholder="Ingresa tu contraseña">
+          </div>
+          <button type="submit" id = 'buttonSubmit'class="btn btn-outline-primary btn-block">Iniciar Sesión</button>      
+        </form>
+        <a href="views/register.html">¿No tienes una cuenta? <span class="font-weight-bold">Registrate</span></a>
+
+        </div>
+      </section>
+    </div>
+  </main>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

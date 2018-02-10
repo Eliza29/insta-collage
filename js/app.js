@@ -25,7 +25,7 @@ $(document).ready(function() {
     if (validateEmail && validatePassword) {
       window.location.href = 'views/collage.html';
     } else {
-      alert('Clave y/o contraseña incorrecta');
+      alert('Correo y/o contraseña incorrecta');
     }
   });
 });
