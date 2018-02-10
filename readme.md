@@ -5,8 +5,10 @@
 Crear una página web usando la API Drag and Drop de HTML5.
 La pagina web nos permitirá hacer un collage con las imágenes de nuestro gusto.
 
-![Sin titulo](assets/docs/1.png)
+**Vista del Formulario**
+![Sin titulo](assets/docs/viewform.png)
 
+**Vista del Collage**  
 ![Sin titulo](assets/docs/2.png)
 
 #### Herramientas:
